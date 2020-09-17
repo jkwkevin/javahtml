@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>芜湖~起飞</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+    <form method="get" action="#">
+        <h1 align="center">用户注册</h1>
+        <fieldset>
+            <legend>身份验证-必填信息</legend>
+            用户名:
+            &nbsp;&nbsp;&nbsp;<input type="text" name="textname">
+            <br/>
+            密码:
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password">
+            <br/>
+            密码确认:
+            <input type="password" name="password1">
+            <br/>
+        </fieldset>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>
+        <fieldset>
+            <legend>身份信息-选填信息</legend>
+            所在城市:
+            <input type="text"name="city"><br/>
+            工作单位:
+            <input type="text" name="work"><br/>
+            家庭住址:
+            <input type="text"name="address"><br/>
+        </fieldset>
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td>
+        <fieldset>
+            <legend>其他个人信息</legend>
+            性别:
+            <select name="sex" >
+                <option value="男孩">男孩</option>
+                <option value="女孩">女孩</option><br/>
+                <select/>
+                <br/>
+                爱好:
+                <input type="checkbox" name="music">音乐
+                <input type="checkbox" name="sports">运动
+                <input type="checkbox" name="computer">计算机
+                <br/>
+                喜欢的公司:
+                <input type="radio"name="baidu">百度
+                <input type="radio"name="Microsoft">微软
+                <input type="radio"name="Goole">谷歌
+                <br/>
+                个人简介:
+                <textarea name="jianjie" rows="10" cols="20"></textarea>
+        </fieldset>
+        <input type="submit" name="tijiao" value="提交您的资料">
+        <input type="reset"name="chongxin" value="重新填写资料"><br/>
+        <input type="button" name="wuyong" value="无效按钮"disabled>
+            </td>
+        </tr>
+    </table>
+    </form>
+
+</body>
+</html>
