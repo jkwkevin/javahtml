@@ -5,23 +5,45 @@
     <title>咖啡奶茶</title>
 
     <style>
-        ul.tea li{
-                list-style: none;
-                float: left;
-                margin-left: 30px;
+        .u2{
+            display: none;
+            position: fixed;
+        }
+        .u2>li{
+            list-style: none;
+        }
+        .drink>li{
+            list-style: none;
+            float: left;
+            margin-left: 40px;
+        }
+        .drink>li:hover .u2{
+            display: block;
         }
     </style>
 </head>
 <body>
 
-        <ul class="tea">
-            <li>奶茶</li>
-            <li>果茶</li>
+        <ul class="drink">
+            <li>奶茶
+                <ul class="u2">
+                    <li>红豆奶茶</li>
+                    <li>原味奶茶</li>
+                    <li>抹茶奶茶</li>
+                </ul>
+            </li>
+            <li>果茶
+                <ul class="u2">
+                    <li>葡萄果茶</li>
+                    <li>苹果果茶</li>
+                    <li>香蕉果茶</li>
+                </ul>
+            </li>
             <li>咖啡
-                <ul class="coffee">
-                    <li>美式咖啡</li><br/>
-                    <li>拿铁咖啡</li><br/>
-                    <li>摩卡咖啡</li><br/>
+                <ul class="u2">
+                    <li>美式咖啡</li>
+                    <li>拿铁咖啡</li>
+                    <li>摩卡咖啡</li>
                 </ul>
             </li>
         </ul>

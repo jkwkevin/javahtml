@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车checkbox选择</title>
+</head>
+<body>
+        <input type="checkbox" class="all" >全选&nbsp;
+        <input type="checkbox" class="single" >选项1&nbsp;
+        <input type="checkbox" class="single" >选项2&nbsp;
+        <input type="checkbox" class="single" >选项3&nbsp;
+        <input type="checkbox" class="reverse" >反选&nbsp;
+
+</body>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+        $(".all").click(function () {
+            //true 选中状态  false未被选中状态
+            var ck =$(this).prop("checked");
+            //全选按钮all原本就是未被选中的状态，点击后，其他所有single将一起被选中
+            //全选按钮all原本是被选中的状态，点击后，其他所有single将一起被取消选中
+            $(".all").prop("checked",ck);
+            $(".single").prop("checked",ck)
+        });
+        //每次点击选项时，都要查看是否所有选项都被选中
+        function checkAll() {
+            var all= true;
+            $(".single").each(function () {
+                var ck = $(this).prop("checked");
+                if (!ck){
+                    //当迭代所有选项时，发现有未被勾选的选项，则全选按钮不被选中
+                    all = false;
+                }
+            });
+            $(".all").prop("checked",all);
+        }
+        /* 点击选项按钮 */
+        $(".single").click(function () {
+            checkAll();
+        });
+        /* 点击反选按钮 */
+        $(".reverse").click(function () {
+            //查看若是点击选项按钮，则将原来的状态变成相反状态
+            $(".single").each(function () {
+                var ck =$(this).prop("checked")
+                ck=!ck;
+                $(this).prop("checked",ck);
+            })
+            checkAll();
+
+        })
+
+
+</script>
+</html>
