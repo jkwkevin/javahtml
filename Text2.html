@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>永远万岁</title>
+
+    <style type="text/css">
+        .diveven { background:#bbffaa;}
+    </style>
+</head>
+<body>
+    <div style="width:100px;height:100px;border:1px solid;display:none">中国万岁</div>
+    <div style="width:100px;height:100px;border:1px solid;display:none">世界万岁</div>
+    <div style="width:100px;height:100px;border:1px solid;">宇宙万岁</div>
+    <input type="button" value="显示并且变颜色"onclick="wansui();"/>
+
+</body>
+<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+    <script>
+    function wansui() {
+        $('div:hidden').show(1000).addClass("diveven");
+    }
+    </script>
+</html>

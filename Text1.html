@@ -5,23 +5,48 @@
     <title>jquery过滤器</title>
 </head>
 <body>
-        <tr>
-            <th>姓名</th>
-            <th>年龄</th>
-            <td>lucy</td>
-            <td>12</td>
-        </tr>
-        <tr>
-
-        </tr>
-        <tr>
-            <td>mary</td>
-            <td>22</td>
-        </tr>
-        <tr>
-            <td>tom</td>
-            <td>33</td>
-        </tr>
-
+    <table>
+    <tr class="xinxi">
+        <td>姓名</td>
+        <td>年龄</td>
+    </tr>
+    <tr class="lucy">
+        <td>lucy</td>
+        <td>12</td>
+    </tr>
+    <tr class="mary">
+        <td>mary</td>
+        <td>22</td>
+    </tr>
+    <tr class="tom">
+        <td>tom</td>
+        <td>33</td>
+    </tr>
+</table>
 </body>
+<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+    <script>
+        $("tr.xinxi").css(
+            {
+                "background":"grey"
+            }
+        )
+        $("tr.lucy").css(
+            {
+                "background":"red"
+            }
+        )
+        $("tr.mary").css(
+            {
+                "background":"green"
+            }
+        )
+        $("tr.tom").css(
+            {
+                "background":"red"
+            }
+        )
+
+
+</script>
 </html>

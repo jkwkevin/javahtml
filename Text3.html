@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>abcd</title>
+</head>
+<body>
+   <select id="s1">
+      <option value="0">--igeek--</option>
+   </select>
+
+</body>
+<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+    <script>
+     var arr1 = ["a","c","d","e","f"];
+
+     $(function() {
+        $(arr1).each(function(i) {
+            $("#s1").append("<option value='"+arr1[i]+"'>"+arr1[i]+"</option>");
+        })
+     })
+    </script>
+</html>
